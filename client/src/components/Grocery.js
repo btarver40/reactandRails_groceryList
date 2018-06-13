@@ -18,7 +18,8 @@ const Grocery =({
   updateGrocery,
   deleteGrocery,
 }) => (
-  <div className="col s12">
+  <form className="col s12">
+  
     <div className="col s8">
       <div
         style={ complete ? styles.complete : {} }
@@ -34,6 +35,10 @@ const Grocery =({
         defaultChecked ={complete}
         onClick={() => updateGrocery(id)}
       />
+      {/* <input
+      id={`grocery-${id}`}
+      onClick={()=> addCategory(id)}
+      /> */}
       <label htmlFor={`grocery-${id}`}>Complete?</label>
     </div>
     <div
@@ -41,9 +46,17 @@ const Grocery =({
       style={styles.pointer}
       onClick={() => deleteGrocery(id)}
     >
-      X
+      Delete
     </div>
-  </div>
+    {/* <thead>
+      <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Complete?</th>
+        <th>Delete</th>
+      </tr>
+    </thead> */}
+  </form>
 )
 
 export default Grocery;

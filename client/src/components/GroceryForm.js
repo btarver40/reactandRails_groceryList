@@ -20,7 +20,7 @@ render(){
   const {groceryName, category} = this.state
   return (
     <form onSubmit={this.handleSubmit}>
-    <input
+    <input 
       name="groceryName"
       placeholder="Add an Item to the List"
       required
@@ -34,12 +34,10 @@ render(){
       value={category}
       onChange={this.handleChange}
     />
-    <button className="btn">Submit!</button>
+    <button className="btn purple darken-2">Add to Cart!</button>
     </form>
   )
 }
-
-
 
 }
 
